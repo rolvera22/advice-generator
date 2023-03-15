@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'advice-generator';
 
   advice!:string;
+  id!:number;
 
   constructor(private http:HttpClient){}
 
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
     this.http.get<any> ('https://api.adviceslip.com/advice').subscribe(data => {
 
       this.advice = data.slip.advice;
+      this.id = data.slip.id;
 
     });
   }
