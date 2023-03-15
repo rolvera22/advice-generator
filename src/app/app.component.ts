@@ -11,6 +11,11 @@ export class AppComponent implements OnInit {
 
   advice!:string;
   id!:number;
+  
+  cambiarAdvice() {
+
+    window.location.reload();
+    }
 
   constructor(private http:HttpClient){}
 
@@ -21,6 +26,13 @@ export class AppComponent implements OnInit {
       this.id = data.slip.id;
 
     });
+
+    
+  
+
+    }
   }
 
-}
+
+
+
